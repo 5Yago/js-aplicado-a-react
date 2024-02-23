@@ -12,9 +12,15 @@
 
 
 
-    //1ª Digitação (aqui) 
+    // Função sintaxe tradicional
+    function nomeDaFuncao () {
+      exibirNaTela('Função de sintaxe tradicional');
+    }
 
-
+    // Função anônima
+    var outraFuncao = function() {
+      exibirNaTela('Outra forma de declarar função');
+    }
 
     // Chamada da função
     nomeDaFuncao();
@@ -26,9 +32,15 @@
     calcule a diferença entre eles e retorne o resultado
     para uma variável externa */
 
+    function exercicio(valor1,valor2) {
+      return valor1 - valor2;
+    }
 
+    let resultado = exercicio(10,3);
 
-    //2ª Digitação (aqui) 
+    exibirNaTela(resultado)
+
+    
 
 
 
@@ -58,7 +70,7 @@
     const multiplicaValores = (valor, fator = 2) => valor * fator;
 
     exibirNaTela(multiplicaValores(10, 3));
-    exibirNaTela(multiplicaValores(50));
+    exibirNaTela(multiplicaValores(50, ));
     
     exibirNaTela('==========================');
 
@@ -67,8 +79,23 @@
     - Chame a função 3x (passando nomes diferentes) e exibindo no console e tela os resultados */
 
     
+    const nomeEmLetrasMaiusculas = (nome) => nome.toUpperCase();
 
-    //3ª Digitação (aqui) 
+    const nome1 = "joão silva";
+    const nome2 = "Maria souza";
+    const nome3 = "eduardo almeida";
+
+    const resultado1 = nomeEmLetrasMaiusculas(nome1);
+    const resultado2 = nomeEmLetrasMaiusculas(nome2);
+    const resultado3 = nomeEmLetrasMaiusculas(nome3);
+
+    console.log(resultado1); // JOÃO SILVA
+    console.log(resultado2); // MARIA SOUZA
+    console.log(resultado3); // EDUARDO ALMEIDA
+     
+    document.write(`<p>${resultado1}</p>`);
+    document.write(`<p>${resultado2}</p>`);
+    document.write(`<p>${resultado3}</p>`);
 
 
 

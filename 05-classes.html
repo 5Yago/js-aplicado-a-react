@@ -12,7 +12,22 @@
 
 
 
-    //1ª Digitação (aqui) 
+    class Pessoa {
+      // Propriedades
+      nome = 'sem nome';
+      genero = 'não informado';
+      idade; 
+    // Metódos
+    mostraGenero() {
+      exibirNaTela(this.genero);
+    }
+    mostraNome() {
+      exibirNaTela(this.nome);
+    }
+    verificaIdade() {
+      return this.idade >=18 ? 'é maior' : 'é menor';
+    }
+  }
 
 
 
@@ -35,9 +50,18 @@
 
     // Criando objetos/ instâncias
 
+    let umaPessoa = new Pessoa;
+    umaPessoa.nome = 'Checo Perez';
+    umaPessoa.genero = 'masculino';
+    umaPessoa.idade = 30;
 
+    exibirNaTela(umaPessoa);
 
-    //2ª Digitação (aqui) 
+    let outtraPessoa = new Pessoa;
+    outraPessoa.nome = 'Maria';
+    outraPessoa.idade = 25;
+    
+    exibirNaTela(outraPessoa);
 
 
 
@@ -47,8 +71,16 @@
 
 
 
-     //3ª Digitação (aqui) 
+     let aluno = new Aluno;
+     aluno.nome = 'Vitória';
+     aluno.genero = 'feminino';
+     aluno.matricula = '123abc';
+     aluno.curso = 'JS para React';
+     aluno.idade = 25;
 
+     exibirNaTela(aluno.nome);
+     exibirNaTela(aluno.idade);
+     exibirNaTela(aluno.verificaIdade());
 
 
 
@@ -65,16 +97,16 @@
     }
 
     // Usando string JSON 
-    // function exibirNaTela(objeto) {
+    function exibirNaTela(objeto) {
     //   // Converte o objeto para uma string JSON formatada
-    //   const jsonString = JSON.stringify(objeto, null, 2);
+      const jsonString = JSON.stringify(objeto, null, 2);
 
     //   // Exibe a mensagem no console do navegador
-    //   console.log(jsonString);
+      console.log(jsonString);
 
     //   // Exibe a mensagem na tela da página
-    //   document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
-    // }
+      document.getElementById('output').innerHTML += '<pre>' + jsonString + '</pre><br>';
+    }
 
   </script>
 </body>
